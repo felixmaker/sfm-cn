@@ -7,15 +7,18 @@ on:
 
 jobs:
   excavate:
-    name: run-update
+    name: run update.ps1
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
       - uses: actions/checkout@v3
         with:
           repository: "felixmaker/scoop-felixmaker"
           fetch-depth: 1
           path: "scoop-felixmaker"
-      - name: Update buckets
+      - name: update bucket
         shell: pwsh
         run: |
           .\update.ps1
