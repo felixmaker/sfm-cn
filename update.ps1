@@ -1,6 +1,3 @@
-# 开启调试
-# Set-PSDebug -Trace 1
-
 # 删除已有的文件
 Remove-Item -Path .\bucket -Recurse -Force
 
@@ -12,11 +9,6 @@ Copy-Item -Path ".\scoop-felixmaker\bucket\*" -Destination ".\bucket" -Recurse -
 
 # 复制完后，删掉克隆的文件夹
 Remove-Item -Path .\scoop-felixmaker -Recurse -Force
-
-# install.ps1
-(Invoke-RestMethod https://raw.githubusercontent.com/scoopinstaller/install/master/install.ps1).Replace('"https://github.com', '"https://ghproxy.com/https://github.com') | Set-Content -Path .\install.ps1
-# 本地调试时使用
-# (Invoke-RestMethod https://ghproxy.com/https://raw.githubusercontent.com/scoopinstaller/install/master/install.ps1).Replace('"https://github.com', '"https://ghproxy.com/https://github.com') | Set-Content -Path .\install.ps1
 
 Get-ChildItem -Recurse -Path .\bucket | ForEach-Object -Process {
     # GitHub Releases
