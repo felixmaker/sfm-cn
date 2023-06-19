@@ -1,10 +1,13 @@
 on:
+  push:
+    branches:
+      - "main"
   schedule:
     - cron: "0 1 * * *"
 
 jobs:
   excavate:
-    name: Excavate
+    name: run-update
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
