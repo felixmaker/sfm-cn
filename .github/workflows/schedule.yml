@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - "master"
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/checkout@v3
+        with:
+          repository: "felixmaker/scoop-felixmaker"
+          fetch-depth: 1
+          path: "scoop-felixmaker"
+      - name: Update buckets
+        shell: pwsh
+        run: |
+          .\update.ps1
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
+          git push
