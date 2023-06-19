@@ -1,7 +1,8 @@
 if(Test-Path .\bucket) {
     Remove-Item -Path .\bucket -Recurse -Force
-    New-Item -ItemType "directory" -Path ".\bucket"
 }
+
+New-Item -ItemType "directory" -Path ".\bucket"
 
 Copy-Item -Path ".\scoop-felixmaker\bucket\*" -Destination ".\bucket" -Recurse -Force
 Remove-Item -Path .\scoop-felixmaker -Recurse -Force
