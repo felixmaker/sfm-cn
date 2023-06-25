@@ -22,8 +22,8 @@ jobs:
         shell: pwsh
         run: |
           .\update.ps1
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name "GitHub Actions"
+          git config user.email actions@github.com
           git add .
           git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
           git push
