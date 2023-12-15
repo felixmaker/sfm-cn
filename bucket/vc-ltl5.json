@@ -3,13 +3,13 @@
     "description": "Fix DecodePointer, EncodePointer, RegDeleteKeyEx etc. APIs not found in Windows XP RTM.",
     "homepage": "https://github.com/Chuyu-Team/VC-LTL5/",
     "license": "MIT",
-    "url": "https://gh-proxy.com/https://github.com/Chuyu-Team/VC-LTL5/releases/download/v5.0.9/VC-LTL-5.0.9-Binary.7z",
+    "url": "https://mirror.ghproxy.com//https://github.com/Chuyu-Team/VC-LTL5/releases/download/v5.0.9/VC-LTL-5.0.9-Binary.7z",
     "hash": "71a3099978ff3dc83fe8e2ebddf104e2f916d13cd10fb01fe02317ebc7fb02d9",
     "env_set": {
         "VC_LTL": "$dir"
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://gh-proxy.com/https://github.com/Chuyu-Team/VC-LTL5/releases/download/v$version/VC-LTL-$version-Binary.7z"
+        "url": "https://mirror.ghproxy.com//https://github.com/Chuyu-Team/VC-LTL5/releases/download/v$version/VC-LTL-$version-Binary.7z"
     }
 }
