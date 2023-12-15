@@ -5,5 +5,5 @@
 使用方法：
 
 ```
-scoop bucket add sfm-cn 'https://gh-proxy.com/github.com/felixmaker/sfm-cn/'
+scoop bucket add sfm-cn 'https://mirror.ghproxy.com/github.com/felixmaker/sfm-cn/'
 ```
